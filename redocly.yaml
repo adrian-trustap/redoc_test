@@ -27,7 +27,7 @@ markdown:
   toc:
     depth: 2
 logo:
-  image: images/logo.svg
+  image: images/trustap-logo-colour.png
   link: /
 footer:
   copyrightText: Copyleft © Redocly Inc. No rights reserved.
