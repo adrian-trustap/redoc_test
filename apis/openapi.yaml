@@ -2601,7 +2601,6 @@ paths:
             tags:
                 - Personal
     /me/multi_use_listings/create:
-        deprecated: true
         post:
             description: |
                 Multi-use listings are disabled once payment has been submitted
