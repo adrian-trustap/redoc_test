@@ -1,4 +1,4 @@
-- page: docs/intro/index.md
+- page: index.md
 - group: Get started
   items:
   - page: docs/intro/hello.md
