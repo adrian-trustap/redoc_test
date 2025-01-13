@@ -1,3 +1,31 @@
+- page: /intro.md
+- group: Get started
+  items:
+  - page: docs/intro/hello.md
+    label: Hello Trustap
+  - page: docs/intro/quickstart.md
+    label: Quickstart
+  - page: docs/intro/auth.md
+    label: Authentication
+- group: Concepts
+  items:
+  - page: docs/concepts/terms.md
+    label: Terminology
+  - page: docs/concepts/rate-limit.md
+    label: Rate limits
+  - page: docs/concepts/webhooks.md
+    label: Webhooks
+- group: Guides
+  items:
+  - label: Online transaction using a card payment
+    page: docs/guides/online-card.md
+  - label: Online transaction using a bank transfer
+    page: docs/guides/online-bank-transfer.md
+  - label: Face to face transaction using a card payment
+    page: docs/guides/face-to-face-card.md
+  - label: Face to face transaction using a bank transfer
+    page: docs/guides/face-to-face-bank-transfer.md
+
 - page: guides/quickstart.md
 - group: Missions
   page: tutorials/index.md
