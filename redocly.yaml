@@ -11,7 +11,7 @@ seo:
   description: Trustap is a transaction platfrom.
 navbar:
   items:
-    - page: docs/intro/index.md
+    - page: index.md
       label: Guides
     - page: apis/openapi.yaml
       label: API Reference
