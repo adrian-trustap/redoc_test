@@ -21,6 +21,7 @@ markdown:
 logo:
   srcSet: "images/trustap-logo-colour.png light, images/trustap-logo-white.png dark"
   link: /
+  favicon: images/favicon.png
 footer:
   copyrightText: Copyleft © Redocly Inc. No rights reserved.
   items:
