@@ -1,64 +1,62 @@
 # Quickstart
 
-<Steps>
-<Step title="Create a guest seller">
-<Tabs>
-<Tab title="Create a guest seller">
-```
+## Step 1: Create a guest seller
+{% tabs %}
+  {% tab label="Create a guest seller" %}
+    ```
 curl --location 'https://dev.stage.trustap.com/api/v1/guest_users' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic dHJ1c3RhcC1pbnRlZ3JhdGlvbi1jbGllbnQ6' \
 --data-raw '{"email":"Brisa@gmail.com","first_name":"Brisa","last_name":"Parker","country_code":"bg","tos_acceptance":{"unix_timestamp":1736440650,"ip":"127.0.0.1"}}'
 ```
-</Tab>
-<Tab title="Response">
-```json title:"Response"
+  {% /tab %}
+  {% tab label="Response" %}
+```
 {
     "created_at": "2025-01-09T16:37:25.783476091Z",
     "email": "Marisa@gmail.com",
     "id": "1-cc5375e7-91ea-4ecc-906c-7bfe4b6f5a95"
 }
 ```
-</Tab>
-</Tabs>
-</Step>
+  {% /tab %}
+{% /tabs %}
 
 
-
-  <Step title="Create a guest buyer">
-<Tabs>
-<Tab title="Create a guest buyer">
-    ```
+## Step 2: Create a guest buyer
+{% tabs %}
+  {% tab label="Create a guest buyer" %}
+        ```
 curl --location 'https://dev.stage.trustap.com/api/v1/guest_users' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: ••••••' \
 --data-raw '{"email":"Joan@gmail.com","first_name":"Joan","last_name":"Klein","country_code":"ca","tos_acceptance":{"unix_timestamp":1736441841,"ip":"127.0.0.1"}}'
 ```
-</Tab>
-<Tab title="Response">
-``` Response
+  {% /tab %}
+  {% tab label="Response" %}
+``` 
 {
     "created_at": "2025-01-09T16:57:21.207947674Z",
     "email": "Joan@gmail.com",
     "id": "1-026095d2-b7ac-4032-b98e-c0c71de81b6b"
 }
 ```
-</Tab>
-</Tabs>
-  </Step>
+  {% /tab %}
+{% /tabs %}
 
 
-<Step title="Calculate the charge">
-    <Tabs>
-    <Tab title="Calculate the charge">
-    ```
+
+## Step 3: Calculate the charge
+{% tabs %}
+  {% tab label="Calculate the charge" %}
+        ```
 curl --location 'https://dev.stage.trustap.com/api/v1/p2p/charge?price=20000&currency=eur' \
 --header 'Authorization: ••••••' \
 --data ''
 ```
-</Tab>
-<Tab title="Response">
-``` response
+
+  {% /tab %}
+  {% tab label="Response" %}
+    ``` response
 {
     "charge": 1080,
     "charge_calculator_version": 3,
@@ -67,15 +65,17 @@ curl --location 'https://dev.stage.trustap.com/api/v1/p2p/charge?price=20000&cur
     "price": 20000
 }
 ```
-</Tab>
-</Tabs>
-  </Step>
+  {% /tab %}
+{% /tabs %}
 
 
-    <Step title="Create a transaction">
-        <Tabs>
-<Tab title="Create a transaction">
-        ```
+
+## Step 4: Create a transaction
+ 
+
+{% tabs %}
+  {% tab label="Create a transaction" %}
+           ```
     curl --location 'https://dev.stage.trustap.com/api/v1/p2p/me/transactions/create_with_guest_user' \
 --header 'Trustap-User: 1-cc5375e7-91ea-4ecc-906c-7bfe4b6f5a95' \
 --header 'Content-Type: application/json' \
@@ -93,40 +93,35 @@ curl --location 'https://dev.stage.trustap.com/api/v1/p2p/charge?price=20000&cur
 }'
 
 ```
-</Tab>
-<Tab title="Response">
-```
-```
-
-</Tab>
-</Tabs>
-  </Step>
+  {% /tab %}
+  {% tab label="Response" %}
+    
+  {% /tab %}
+{% /tabs %}
 
 
-    <Step title="Transfer funds">
+## Step 5: Transfer funds
     ```
         https://actions.stage.trustap.com/f2f/transactions/20809/pay_deposit?redirect_uri=https://app.trustap.com&state=dG9rZW49Njc4ZmUyNGUwMWRiZTRhNzk4ZWViODVkZTZhMzE5NDA6dHhfdHlwZT1wMnA6b3JkZXJfaWQ9MjAyOTpuYW1lPXRlc3QgdGVzdDpsaW5lMT1BZGRyZXNzIDE6Y2l0eT1CTEFLRURPV046c3RhdGU9OnBvc3Rjb2RlPURZMTAgNUZTOmNvdW50cnk9R0I=
     ```
 
-    ![]()
-  </Step>
+## Step 6: Confirm harndover
+    
 
-    <Step title="Confirm harndover">
-    
-    <Tabs>
-        <Tab title="Confirm harndover">
-    
-    ```
-    
+
+
+
+{% tabs %}
+  {% tab label="Confirm harndover" %}
+        ```
         curl --location --request POST 'https://dev.stage.trustap.com/api/v1/p2p/transactions/20837/confirm_handover_with_guest_user' \
 --header 'Trustap-user: 1-cc5375e7-91ea-4ecc-906c-7bfe4b6f5a95' \
 --header 'Authorization: Basic dHJ1c3RhcC1pbnRlZ3JhdGlvbi1jbGllbnQ6'
     ```
-    </Tab>
 
-    <Tab title="Response">
-
-    ``` response
+  {% /tab %}
+  {% tab label="Response" %}
+        ```
 {
     "id": 20837,
     "status": "seller_handover_confirmed",
@@ -159,8 +154,6 @@ curl --location 'https://dev.stage.trustap.com/api/v1/p2p/charge?price=20000&cur
     "buyer_is_guest": true,
     "seller_is_guest": true
 }
-    ```
-</Tab>
-    </Tabs>
-  </Step>
-</Steps>
+```
+  {% /tab %}
+{% /tabs %}
