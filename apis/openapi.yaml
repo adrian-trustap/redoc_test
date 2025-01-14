@@ -10807,5 +10807,7 @@ securityDefinitions:
         flow: accessCode
         tokenUrl: https://sso.trustap.com/auth/realms/trustap-stage/protocol/openid-connect/token
         type: oauth2
+        scopes:
+          all: "Full access to all resources"
 swagger: "2.0"
 
